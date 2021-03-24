@@ -1,4 +1,4 @@
-##Inventory Management System
+## Inventory Management System
 
 This project has a basic implementation of adding new product catalog 
 in the inventory management system.
