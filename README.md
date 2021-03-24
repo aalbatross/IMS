@@ -13,6 +13,14 @@ Features:
     b. maven 3.6 +
     c. curl/postman/web-browser
 
+### Building and Running using Docker
+If developer do not have or want to install pre-requisites we can alternatvely build and run using docker. Steps are below :
+1. Get docker installed https://docs.docker.com/get-docker/.
+2. docker pull maven:3.6.3-jdk-11
+3. docker run -p 8080:8080 -v `pwd`:/IMS -it maven:3.6.3-jdk-11 /bin/bash
+
+Once you're logged in to the terminal follow, regular maven commands highlighted below.
+
 ### Build
     mvn clean package
 
@@ -42,3 +50,4 @@ A sample csv for reference is placed in src/main/resources/sample.csv.
 The service can be configured for following :
 1. upload store: It is a path or directory where the csv files uploaded are stored.
 2. max file size allowed for import.
+
