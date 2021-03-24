@@ -65,7 +65,7 @@ public class ProductService implements ProductApi {
 
   @Override
   public List<Product> searchAllProductWithCategories(List<ProductCategory> productCategories) {
-    log.info("Searching the Product repository with product categories.", productCategories);
+    log.info("Searching the Product repository with product categories {}.", productCategories);
     return repository.findByProductCategoryIn(productCategories);
   }
 
