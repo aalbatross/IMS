@@ -1,5 +1,6 @@
 package org.aalbatross.ims.controllers;
 
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.aalbatross.ims.services.ImportService;
@@ -11,13 +12,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/ims/api/v1/import")
+@Api(value = "IMS Import Service", description = "Importing batch of products as CSV file.")
 public class ImportController {
 
   @Autowired private ImportService importService;
 
   @PostMapping(value = "/csv")
   @ApiOperation(
-      value = "Make a POST request to upload the file",
+      value = "Make a POST request to upload the product csv file",
       produces = "application/json",
       consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
   public ResponseEntity<?> importProducts(

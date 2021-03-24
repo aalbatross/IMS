@@ -27,6 +27,9 @@ public class ProductService implements ProductApi {
   @Transactional
   public Product update(Product product) {
     log.info("Updating existing product using {}.", product);
+    repository
+        .findById(product.getPartNumber())
+        .orElseThrow(() -> new IllegalArgumentException("Create the product before updating it."));
     return repository.save(product);
   }
 

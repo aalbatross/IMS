@@ -20,7 +20,8 @@ Features:
     java -jar target/IMS-1.0-SNAPSHOT.jar 
 
 ### Swagger-ui
-Once the application is run, developer can access the swagger-ui at http://localhost:8080/swagger-ui/
+Once the application is run, developer can access the swagger-ui at http://localhost:8080/swagger-ui/.
+It aims to provide details of the API.
 
 ### Specification for importing CSV file
 The CSV used for importing should follow the following criteria :

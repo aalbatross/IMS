@@ -33,7 +33,9 @@ public class ImportService implements ImportApi {
       var csvFile = writeToFile(file);
       var prodIssues = parseCSV(csvFile);
       var issues = persist(prodIssues);
-      log.info("Persisted the product list from imported CSV {}.", file.getOriginalFilename());
+      log.info(
+          "Persisted the product list from imported CSV and reporting issues if any {}.",
+          file.getOriginalFilename());
       return issues;
     } catch (IOException e) {
       throw new IllegalArgumentException("Provide appropriate csv file.");
